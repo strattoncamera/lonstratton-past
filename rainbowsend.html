@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rainbows End | Circle of Sound</title>
+	<meta name="description" content="Rainbows End and Circle of Sound from the 1970's">
+	<link rel="canonical" href="https://lonstratton.com/rainbowsend.html">
+	<link rel="stylesheet" href="css/extras.css">
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+<div class="container">
+	<header id="navtop">
+		<div class="fleft">
+			<h1>
+				Rainbows End
+				<span class="h1-sub">1976-1978</span> 
+			</h1>
+		</div>
+	<nav class="fright"> 
+		<ul>
+			<li><a href="mhs.html">Madeira High School</a></li>
+			<li><a href="imperials.html">The Imperials</li>
+			<li class="navactive">Rainbows End</li>
+			</ul>
+		<ul>
+			<li><a href="jazzbackgrounds.html">Jazz Backgrounds</a></li>
+			<li><a href="lessel.html">Lessel | Stratton</a></li>
+			<li><a href="past.html">INDEX</a></li>
+		</ul>
+    </nav> 
+	</header>
+		<div class="works-page grid-wrap">
+		<div class="grid col-full mq2-col-full">
+			<hr>
+			<figure class="grid col-one-third mq2-col-one-half mq3-col-full">
+				<figcaption>
+					<p>
+						Somewhere in Sharonville OH 
+					</p>
+				</figcaption>
+				<audio controls>
+					<source src="https://music.lonstratton.com/music/rainbowsend/rainbowsend_sharonville.mp3"> 
+				</audio>
+			</figure>
+			<figure class="grid col-one-third mq2-col-one-half mq3-col-full">
+				<figcaption>
+					<p>
+						Marietta OH 1977 | Last set 
+					</p>
+				</figcaption>
+				<audio controls>
+					<source src="https://music.lonstratton.com/music/rainbowsend/rainbowsend_1977.mp3"> 
+				</audio>
+			</figure>
+			<figure class="grid col-one-third mq2-col-one-half mq3-col-full">
+				<figcaption>
+					<p>
+						Loll 43 NYE 1978 
+					</p>
+				</figcaption>
+				<audio controls>
+					<source src="https://music.lonstratton.com/music/rainbowsend/loll43_nye_1978.mp3"> 
+				</audio>
+			</figure>
+			<figure class="grid col-one-third mq2-col-one-half mq3-col-full">
+				<figcaption>
+					<p>
+						Circle of Sound - Friar Tucks 1 
+					</p>
+				</figcaption>
+				<audio controls>
+					<source src="https://music.lonstratton.com/music/rainbowsend/cos_friartucks_1.mp3"> 
+				</audio>
+			</figure>
+			<figure class="grid col-one-third mq2-col-one-half mq3-col-full">
+				<figcaption>
+					<p>
+						Circle of Sound - Friar Tucks 2 
+					</p>
+				</figcaption>
+				<audio controls>
+					<source src="https://music.lonstratton.com/music/rainbowsend/cos_friartucks_2.mp3"> 
+				</audio>
+			</figure>
+		</div>
+		<div class="grid col-full">
+		<picture>
+			<source srcset="img/recos.png" media="(prefers-color-scheme: dark)">
+			<img src="img/recos.jpg" alt="Rainbows End then and now"> 
+		</picture>
+		<p class="centered">
+			<span style="font-size:.9em; font-weight:bolder; color:#999;"> (1) Lon Stratton - Keyboards/woodwinds&emsp;(2) Don Wilson - Guitar/Bass&emsp;(3) Brett Rockwood - Bass/trumpet&emsp;(4) )Dave Oravec - Drums&emsp;(5) Chuck Zix - Guitar</span> 
+		</p>	
+		</div>
+		<footer class="grid col-full">
+	<div class="grid col-full divide-top">
+		<p>
+		<span style="font-size:1.1em; font-weight:bolder;"> Contact info:
+		<a href="mailto:lons@n7xa.com?subject=Inquiry%20from%20RainbowsEnd%20page">email</a> or 248.613.2049
+		</span>
+		</p>
+	</div>
+</footer>
+	</div>
+</div>
+<script>document.addEventListener("play",function(e){document.querySelectorAll("audio").forEach(audio=>{const fig=audio.closest("figure");if(audio!==e.target){audio.pause();audio.currentTime=0;fig&&fig.classList.remove("is-playing")}});const currentFigure=e.target.closest("figure");currentFigure&&currentFigure.classList.add("is-playing")},!0);document.addEventListener("pause",function(e){const fig=e.target.closest("figure");fig&&fig.classList.remove("is-playing")},!0)</script>
+</body>
+</html>

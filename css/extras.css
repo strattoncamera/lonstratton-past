@@ -1,0 +1,704 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/inter-v18-latin-300.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../fonts/inter-v18-latin-300italic.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v18-latin-700.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/inter-v18-latin-700italic.woff2') format('woff2'); 
+}
+audio {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: calc(100% - 0.8em); /* creates breathing room */
+  margin: 0.25em 0.4em 0.75em;
+  height: 32px;
+}
+audio:not([controls]) {
+display: none;
+}
+:focus-visible {
+	outline: 2px solid #0078CF;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Helvetica Neue", "Inter", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+body {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.6;
+}
+a {
+	color: #0078CF;
+	font-weight: normal;
+	cursor: pointer;
+	text-decoration: none;
+	transition:color 0.2s ease;
+}
+a:hover {
+	color: #000;
+	text-decoration: underline;
+	background: rgba(0, 0, 0, .03);
+}
+::selection {
+background: #0078CF;
+color: #fff;
+text-shadow: none;
+}
+p {
+	margin: 0 0 1em;
+}
+p:last-child {
+	margin-bottom: 0;
+}
+a:visited {
+	opacity:0.9;
+}
+a:active, a:focus {
+	position:relative;
+	top:1px;
+	font-size: 1em;
+}
+hr {
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #ddd;
+	margin:1em 0;
+	padding:0
+}
+blockquote {
+	margin: 1em 1em 1em 0;
+	padding: 1em;
+	border-left: 1px solid #DDD;
+	font-style: italic;
+	color: #999;
+}
+blockquote p {
+	font-size: 1.1em;
+	line-height: 2em;
+	margin-bottom: 0;
+}
+blockquote small {
+	display: block;
+	font-size: 1em;
+	line-height: 1.6em;
+	color: #bfbfbf;
+	text-align: right;
+}
+blockquote small:before {
+	content: '\2014 \00A0';
+}
+b, strong {
+	font-weight:700
+}
+small {
+	font-size:85%;
+	color: #999;
+}
+sub, sup {
+	font-size:75%;
+	line-height:0;
+	position:relative;
+	vertical-align:baseline
+}
+sup {
+	top:-0.5em
+}
+sub {
+	bottom:-0.25em
+}
+ul, ol {
+	list-style:none;
+	list-style-image:none;
+	margin:0;
+	padding:0;
+}
+img {
+	border:0;
+	vertical-align:middle
+}
+figure {
+	margin:0
+}
+/* -------------------------------------------------------------
+======	STYLES
+------------------------------------------------------------- */
+
+/* -- TYPOGRAPHY
+------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Helvetica Neue", "Inter", Helvetica, Arial, sans-serif;
+	margin:0 0 .6em;
+	font-weight: normal;
+}
+h1 {
+	font-size: 2em;
+	letter-spacing: -0.05em;
+	line-height: 1;
+	color: #000;
+}
+.h1-sub { 
+    font-size: .8rem;
+    display:block; 
+    margin:.2em;
+    font-weight:500;
+    color: #616161;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+h2 {
+	font-size: 1.7em;
+	margin: 0 0 .5em;
+	letter-spacing: -0.05em;
+	color: #555;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.3em;
+	margin: 0 .5em .3em 0;
+}
+h5 {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 0;
+	padding-left: 1em;
+	color: #696969;
+}
+h6 {
+	font-size: 1.2em;
+	padding-top: 2.5em;
+	font-weight: 700;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color:#333;
+	text-decoration: none;
+}
+h1 a:hover {
+	color: #0078CF;
+	text-decoration: none;
+	background: none;
+}
+h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	color:#0078CF;
+	text-decoration: underline;
+}
+/* -- GRID
+------------------------------------------------------------- */
+body {
+	width:100%;
+	background: #fff;
+}
+.container {
+	width: 90%;
+	margin: 5em auto;
+	max-width: 1100px;
+	min-width: 375px;
+}
+.grid-wrap {
+	margin-left: -3em; /* the same as your gutter */
+	overflow: hidden;
+}
+.grid-wrap:before, .grid-wrap:after {
+	content:"";
+	display:table
+}
+.grid-wrap:after {
+	clear:both
+}
+.grid {
+	float: left;
+	padding-left: 3em; /* this is your gutter between columns */
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.half-gutter {
+	margin-left: -1.5em;
+}
+.half-gutter .grid-col {
+	padding-left: 1.5em;
+}
+.col-full {
+	width: 100%;
+}
+.col-one-half {
+	width: 50%;
+}
+.col-one-third {
+	width: 33.333%;
+}
+.col-two-thirds {
+	width: 66.666%;
+}
+.col-one-quarter {
+	width: 25%;
+}
+.col-three-quarters {
+	width: 75%;
+}
+.divide-top {
+	border-top: 1px solid #ccc;
+	padding-top: 2em;
+	margin-top: 1.5em;
+}
+.mright {
+	margin-right: 3em;
+}
+.mleft {
+	margin-left: 3em;
+}
+.mtop {
+	margin-top: 3em;
+}
+.mbottom {
+	margin-bottom: 3em;
+}
+.halfmright {
+	margin-right: 1.5em;
+}
+.halfmleft {
+	margin-left: 1.5em;
+}
+.halfmtop {
+	margin-top: 1.5em;
+}
+.halfmbottom {
+	margin-bottom: 1.5em;
+}
+.fright, .fleft {
+	display:block;
+	overflow:hidden
+}
+.fright {
+	float:right
+}
+.fleft {
+	float:left
+}
+.alignleft {
+	float: left;
+	clear: left;
+	margin: 0.38em 1.62em 0.38em 0;
+}
+.alignright {
+	float: right;
+	clear: right;
+	margin: 0.38em 0 0.38em 1.62em;
+}
+.aligncenter {
+	margin: 0 auto 1.62em;
+	display: block;
+}
+.centered {
+	text-align: center;
+}
+/* -- MISC
+------------------------------------------------------------- */
+figure {
+	max-height: 100%;
+	overflow: hidden;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+a img {
+	transition: opacity 1s ease;
+}
+a img:hover {
+	opacity: 0.7;
+}   
+/* -- HEADER
+------------------------------------------------------------- */
+header#navtop {
+	margin-bottom: 1em;
+	clear: both;
+	overflow: hidden;
+}
+header nav ul {
+	float: left;
+	overflow: hidden;
+	padding: 0 1.5em;
+	border-left: 1px solid #ddd;
+	line-height: 2em;
+}
+nav a {
+	text-decoration: none;
+	color: #555;
+}
+nav:hover {
+	color: #000;
+}
+.navactive {
+    color: #c60000;
+    font-weight: 700;
+    letter-spacing: -.04em;
+}
+/* -- GENERAL 
+------------------------------------------------------------- */
+.arrow:after {
+	content:" \2192"; /* html unicode: &#x2192; */
+}
+/* -- FOOTER
+------------------------------------------------------------- */
+footer {
+	color: #555;
+	margin-bottom: 7em;
+}
+footer p
+{
+	display: block;
+	text-align: center;
+}
+footer nav ul {
+	float: right;
+	overflow: hidden;
+}
+footer a
+{ 
+	color: #999;
+	font-weight: 500;
+}
+footer a:hover { text-decoration: none; }
+footer li {
+	float: left;
+	margin-right: 1em;
+	padding-right: 1em;
+	border-right: 1px solid #DDD;
+	font-size: 0.9em;
+}
+footer li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+	border-right: none;
+}
+.top-of-page {
+    text-align: center;
+}
+.top-button { /* Button Styling */
+    display: inline-block;
+    color: #4e7b94;
+    font-size: 1.2em;
+    padding: .2em;
+    border: none;
+}
+.top-button::before {
+    content: "\2191";
+    font-family: system-ui, -apple-system, sans-serif;
+    display: inline-block;
+}
+/* desktop / mouse hover only */
+@media (hover: hover) and (pointer: fine) {
+.top-button:hover {
+    color: #fff;
+    background: #aeaeae;
+}
+}
+.top-button:active {
+    position: relative;
+    top: 2px;
+}
+/* -- WORKS / Home-page and Works-page
+------------------------------------------------------------- */
+.works figure figcaption {
+	margin-top: 0.1em;
+	margin-bottom: 1em;
+	padding: 0 0.5em;
+	white-space: nowrap;
+}
+.works figure figcaption a {
+	line-height:2em;
+	color: #555;
+	font-weight: 700;
+}
+.works figure figcaption p {
+	margin: 0;
+}
+.works-page .works figure {
+	margin-bottom: 2em;
+}
+.main aside {
+	margin-bottom: 3em
+}
+.main aside menu {
+	padding: 0 0 0 1em;
+	line-height: 2em;
+}
+.main aside menu a {
+	color: #999;
+}
+.main aside menu .buttonactive {
+	color: #0078CF
+}
+/* ======================================================
+   Currently playing audio (subtle highlight)
+   ====================================================== */
+figure.is-playing audio {
+  filter: saturate(1.05);
+}
+figure.is-playing::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: 2.9em;
+  margin-right: 0;
+  bottom: 0.5em;
+  height: 38px;
+  background: rgba(0, 120, 207, 0.1);
+  border: 1px solid rgba(0, 120, 207, 0.35);
+  border-radius: 10px;
+  pointer-events: none;
+}
+figure.is-playing figcaption p {
+  color: #0078CF;
+}
+figure:has(audio) {
+  position: relative;
+  overflow: visible;
+}
+/* -- SUBPAGES 
+------------------------------------------------------------- */
+.work-page figure {
+	margin-bottom: 3em;
+}
+.work-page figcaption {
+	text-align: center;
+	margin-top: 1em;
+}
+/* -------------------------------------------------------------
+======	MEDIA QUERIES
+------------------------------------------------------------- */
+
+/* -- Media query 1 (mq1)
+------------------------------------------------------------- */
+@media only screen and (max-width: 60em) { /* 16 / 960 */
+ .mq1-col-full {
+width: 100%;
+}
+ .mq1-col-one-half {
+width: 50%;
+}
+ .mq1-col-one-third {
+width: 33.333%;
+}
+ .mq1-col-two-thirds {
+width: 66.666%;
+}
+ .mq1-col-one-quarter {
+width: 25%;
+}
+ .mq1-col-three-quarters {
+width: 75%;
+}
+ footer li {
+float: left;
+margin-right: 0.5em;
+padding-right: 0.5em;
+border-right: 1px solid #DDD;
+}
+}
+/* -- Media query 2 (mq2)
+------------------------------------------------------------- */
+@media only screen and (max-width: 50em) { /* 16 / 800 */
+.mq2-col-full {
+width: 100%;
+}
+.mq2-col-one-half {
+width: 50%;
+}
+.mq2-col-one-third {
+width: 33.333%;
+}
+.mq2-col-two-thirds {
+width: 66.666%;
+}
+.mq2-col-one-quarter {
+width: 25%;
+}
+.mq2-col-three-quarters {
+width: 75%;
+}
+	/**/
+header nav {
+width: 100%;
+}
+header nav ul {
+padding: 0;
+border-left:none;
+line-height: 2em;
+}
+header nav ul li {
+float: left;
+padding: 0 1em;
+border-left:1px solid #ddd;
+}
+}   
+/* -- Media query 3 (mq3)
+------------------------------------------------------------- */
+@media only screen and (max-width: 30em) {	/* 16 / 480 */
+	.mq3-col-full { width: 100%; }
+	.mq3-col-one-half { width: 50%; }
+	.mq3-col-one-third { width: 33.333%; }
+	.mq3-col-two-thirds { width: 66.666%; }
+	.mq3-col-one-quarter { width: 25%; }
+	.mq3-col-three-quarters { width: 75%; }
+	.mq3-col-one-fifth { width: 20%; }
+	.mq3-col-two-fifths { width: 40%; }
+	.mq3-col-three-fifths { width: 60%; }
+	.mq3-col-one-sixth { width: 16.666%; }
+	.mq3-none { display: none; }
+	h1 { padding: 0 0 0 .1em; }
+	
+	/**/
+	header nav ul li { padding: 0 0.5em; }
+	
+	.mobile
+	{
+		letter-spacing: .05em;
+		font-weight: 900;
+		font-size: 1.3em;
+		line-height: 1.7em;
+	}
+	
+	footer img
+	{
+		height:3em;
+		margin-top: 1em;
+		margin-bottom: 1.5em;
+		padding-left: 2em;
+	}
+	
+	footer li
+	{
+		float: none;
+		margin-top: -0.5em;
+		margin-right: 0em;
+		padding-right: 0em;
+		border-right: none;
+		line-height: 2.5em;
+	}
+}
+/* ======================================================
+   DARK MODE (system preference)
+   ====================================================== */
+@media (prefers-color-scheme: dark) {
+
+  html {
+    background: #0f1113;
+    color: #cfcfcf;
+  }
+
+  body {
+    background: #0f1113;
+  }
+  
+  .logo {
+    filter: invert(0.75);
+  }
+
+  h1, h2, h3, h4 {
+    color: #ffffff;
+  }
+  
+  h3 a {
+  color: #a8acb0;
+  }
+  
+  header nav a {
+	color: #aaa;
+  }
+
+  .h1-sub {
+    color: #9aa0a6;
+  }
+
+  p, figcaption p {
+    color: #cfcfcf;
+  }
+
+  a {
+    color: #6fb6ff;
+  }
+
+  a:hover {
+    color: #ffffff;
+    background: rgba(255,255,255,0.03);
+  }
+
+  hr {
+  border-top-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .divide-top {
+    border-top-color: rgba(255, 255, 255, 0.5);
+  }
+
+  blockquote {
+    border-left-color: #333;
+    color: #aaa;
+  }
+
+  figure.is-playing::after {
+    background: rgba(111, 182, 255, 0.15);
+    border-color: rgba(111, 182, 255, 0.4);
+  }
+
+  footer {
+    color: #9aa0a6;
+  }
+
+  footer a {
+    color: #9aa0a6;
+  }
+
+}
+/* -- PRINT STYLES 
+------------------------------------------------------------- */
+@media print {
+body {color: #000;}
+a {text-decoration: underline;}
+}
+
+/* -------------------------------------------------------------
+======	END
+------------------------------------------------------------- */
