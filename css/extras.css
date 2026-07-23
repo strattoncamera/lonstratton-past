@@ -380,6 +380,11 @@ a img {
 a img:hover {
   opacity: 0.7;
 }
+.page-404-content {
+    max-width: 42em;
+    margin: 3em auto;
+    text-align: center;
+}
 /* -- HEADER 
 ------------------------------------------------------------- */
 header#navtop {
